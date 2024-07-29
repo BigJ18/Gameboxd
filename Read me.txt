@@ -1,0 +1,102 @@
+﻿GAMEBOXD - READ ME
+Sobre o Projeto
+O projeto Gameboxd é uma aplicação web que permite aos usuários gerenciar seus jogos favoritos, avaliar jogos e visualizar avaliações de outros usuários. A aplicação é composta por um back-end desenvolvido em Java com Spring Boot e um front-end desenvolvido em React.
+Funcionalidades Principais
+1. Cadastro de Usuários: Permite aos usuários criar uma conta.
+2. Login de Usuários: Permite aos usuários autenticarem-se na aplicação.
+3. Visualização de Jogos: Permite visualizar uma lista de jogos disponíveis.
+4. Avaliação de Jogos: Permite aos usuários adicionar avaliações de jogos.
+5. Favoritos: Permite aos usuários adicionar jogos à sua lista de favoritos.
+Principais Requisições
+Requisições para Usuários
+Cadastro de Usuários
+* Endpoint: /api/usuarios/cadastro
+* Método: POST
+* Descrição: Cadastra um novo usuário.
+* Corpo da Requisição:
+script Json:
+{
+  "email": "email@example.com",
+  "password": "senha",
+  "username": "nomeDeUsuario"
+}
+Login de Usuários
+* Endpoint: /api/usuarios/login
+* Método: POST
+* Descrição: Realiza a autenticação de um usuário.
+* Corpo da Requisição
+script json:
+{
+  "email": "email@example.com",
+  "password": "senha"
+}
+
+
+Requisições para Jogos
+Listar Todos os Jogos
+* Endpoint: /api/games
+* Método: GET
+* Descrição: Retorna a lista de todos os jogos.
+Obter Detalhes de um Jogo
+* Endpoint: /api/games/{id}
+* Método: GET
+* Descrição: Retorna os detalhes de um jogo específico.
+* Parâmetros:
+   * id: ID do jogo.
+Adicionar um Jogo
+* Endpoint: /api/games
+* Método: POST
+* Descrição: Adiciona um novo jogo.
+* Corpo da Requisição
+script json:
+{
+"title": "Título do Jogo",
+ "description": "Descrição do Jogo",
+"coverUrl": "URL da Capa do Jogo"
+}
+Deletar um Jogo
+* Endpoint: /api/games/{id}
+* Método: DELETE
+* Descrição: Remove um jogo pelo ID.
+* Parâmetros:
+   * id: ID do jogo.
+Requisições para Avaliações
+Listar Avaliações de um Jogo
+* Endpoint: /api/game-reviews/game/{gameId}
+* Método: GET
+* Descrição: Retorna a lista de avaliações de um jogo específico.
+* Parâmetros:
+   * gameId: ID do jogo.
+Adicionar Avaliação
+* Endpoint: /api/game-reviews
+* Método: POST
+* Descrição: Adiciona uma nova avaliação.
+* Corpo da Requisição:
+script json:
+{
+  "reviewText": "Texto da Avaliação",
+  "rating": 5,
+  "gameId": 1,
+  "userId": 1
+}
+Deletar Avaliação
+* Endpoint: /api/game-reviews/{id}
+* Método: DELETE
+* Descrição: Remove uma avaliação pelo ID.
+* Parâmetros:
+   * id: ID da avaliação.
+Requisições para Jogos Favoritos
+Adicionar Jogo aos Favoritos
+* Endpoint: /api/usuarios/{userId}/favorite-games/{gameId}
+* Método: POST
+* Descrição: Adiciona um jogo aos favoritos de um usuário.
+* Parâmetros:
+   * userId: ID do usuário.
+   * gameId: ID do jogo.
+Listar Jogos Favoritos de um Usuário
+* Endpoint: /api/usuarios/{userId}/favorite-games
+* Método: GET
+* Descrição: Retorna a lista de jogos favoritos de um usuário.
+* Parâmetros:
+   * userId: ID do usuário.
+No git, estão ambos os projetos, tanto o front quando o backend. Para rodá-los, basta abrir ambos nas ides apropriadas e rodar o projeto. Caso ocorra problemas de requisição, deve ser ao foto do arquivo Webconfig estar configurado para permitir apenas requisições ao ip nele implementados. Basta mudar o ip do arquivo Webconfig.java para o mesmo ip que seu frontend esteja rodando.
