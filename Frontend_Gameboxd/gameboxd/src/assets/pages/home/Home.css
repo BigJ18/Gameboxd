@@ -1,0 +1,72 @@
+.home-container {
+  background-image: url('https://i.imgur.com/dnalkQX.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.section-title {
+  font-size: 1.5em;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.games-section {
+  margin-bottom: 40px;
+}
+
+.home-games-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; 
+}
+
+.home-game-card {
+  flex: 0 0 calc(25% - 20px); 
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.home-game-card:hover {
+  transform: scale(1.05);
+}
+
+.home-game-cover {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 5px;
+  border: 1px solid #333; 
+}
+
+.home-game-card h2 {
+  font-size: 1em;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;  
+  word-wrap: break-word; 
+  white-space: normal; 
+  text-shadow: 1px 1px 2px black; 
+}
+
+.home-game-card h2:hover {
+  text-decoration: underline;
+}
+
+.search-input {
+  width: 100%;
+  opacity: 1;
+  transition: width 0.3s, opacity 0.3s;
+  padding: 5px;
+  margin-bottom: 20px;
+}

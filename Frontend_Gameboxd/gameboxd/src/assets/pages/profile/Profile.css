@@ -1,0 +1,48 @@
+.profile-container {
+  padding: 20px;
+  color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+.profile-container h1,
+.profile-container h2,
+.profile-container h3 {
+  text-align: center;
+}
+
+.favorites-section {
+  margin-top: 20px;
+}
+
+.favorites-section ul,
+.games-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.favorites-section li,
+.games-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3a3f47;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.favorites-section button,
+.games-list button {
+  background-color: #61dafb;
+  border: none;
+  color: #282c34;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.favorites-section button:hover,
+.games-list button:hover {
+  background-color: #21a1f1;
+}
